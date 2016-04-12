@@ -11,6 +11,7 @@ thumbnail-image {
   height: $thumbnail-height;
   margin: 10px;
   border: $regular-border;
+  position: relative;
   
   &[selected] {
     border: $selected-border;
@@ -27,5 +28,11 @@ thumbnail-image {
   img {
     width: $thumbnail-width;
     height: $thumbnail-height;
+  }
+  
+  .trash-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
   }
 }

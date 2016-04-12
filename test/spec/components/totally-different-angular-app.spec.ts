@@ -27,4 +27,11 @@ describe('Component: totallyDifferentAngularApp', () => {
       expect(driver.isImageSelected(index)).toBe(expectation);
     });
   });
+
+  it('should remove an image item', () => {
+    let removedImage = driver.images[0].title;
+    driver.removeImageAt(0);
+    let titles = driver.images.map(image => image.title);
+    expect(titles).not.toContain(removedImage);
+  });
 });

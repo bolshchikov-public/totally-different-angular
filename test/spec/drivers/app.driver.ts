@@ -17,4 +17,8 @@ class AppDriver extends WixBaseViewUnitDriver {
   isImageSelected(index: number): boolean {
     return this.images[index].isSelected();
   }
+
+  removeImageAt(index: number): void {
+    this.images[index].remove();
+  }
 }

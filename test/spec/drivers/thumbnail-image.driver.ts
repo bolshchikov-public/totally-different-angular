@@ -12,11 +12,24 @@ class ThumbnailImageDriver extends WixBaseViewUnitDriver {
     return this.image.attr('src');
   }
 
+  get trashIcon() {
+    return this.findByDataHook('trash');
+  }
+
+  get title(): string {
+    return this.image.attr('alt');
+  }
+
   select() {
     this.image.click();
   }
 
   isSelected() {
     return !!this.element.attr('selected');
+  }
+
+  remove() {
+    this.image.trigger('mouseover');
+    this.trashIcon.click();
   }
 }

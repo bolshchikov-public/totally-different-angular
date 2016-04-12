@@ -6,7 +6,8 @@
     <thumbnail-image 
       ng-repeat="item in $ctrl.images track by item.relativeUri"
       ng-click="$ctrl.selected = item"
-      ng-selected="$ctrl.selected === item" 
+      ng-selected="$ctrl.selected === item"
+      on-remove="$ctrl.removeImage(item)" 
       item="item">
     </thumbnail-image>
   </div>

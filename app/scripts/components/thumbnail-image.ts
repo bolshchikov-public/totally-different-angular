@@ -6,6 +6,7 @@ angular
   .component('thumbnailImage', {
     templateUrl: 'views/thumbnail-image.html',
     bindings: {
-      item: '='
+      item: '=',
+      onRemove: '&'
     }
   });
