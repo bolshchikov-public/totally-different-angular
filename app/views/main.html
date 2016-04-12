@@ -3,9 +3,12 @@
 </header>
 <main>
   <div class="list">
-    <div class="image-item" data-hook="image-item" ng-repeat="item in $ctrl.images track by item.relativeUri">
-      <img ng-src="https://static.wixstatic.com/media/{{item.relativeUri}}_srz_p_120_120_75_22_0.50_1.20_0.00_jpg_srz" alt="{{item.title}}">
-    </div>
+    <thumbnail-image 
+      ng-repeat="item in $ctrl.images track by item.relativeUri"
+      ng-click="$ctrl.selected = item"
+      ng-selected="$ctrl.selected === item" 
+      item="item">
+    </thumbnail-image>
   </div>
   <aside></aside>
 </main>

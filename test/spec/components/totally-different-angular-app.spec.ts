@@ -1,23 +1,12 @@
 /// <reference path="../../../reference.ts" />
 'use strict';
 
-class TotallyDifferentAngularAppDriver extends WixBaseViewUnitDriver {
-
-  render() {
-    this.renderFromTemplate(`<totally-different-angular-app></totally-different-angular-app>`);
-  }
-
-  get images() {
-    return this.findAllByDataHook('image-item');
-  }
-}
-
 describe('Component: totallyDifferentAngularApp', () => {
-  let driver: TotallyDifferentAngularAppDriver;
+  let driver: AppDriver;
 
   beforeEach(() => {
     module('totallyDifferentAngularAppInternal');
-    driver = new TotallyDifferentAngularAppDriver();
+    driver = new AppDriver();
     driver.render();
   });
 
@@ -27,5 +16,15 @@ describe('Component: totallyDifferentAngularApp', () => {
 
   it('should display the list of images', () => {
     expect(driver.images.length).toEqual(7);
+  });
+
+  it('should be selected on click', () => {
+    driver.selectImageAt(0);
+    let res = driver.images.map((image, index) => {
+      return index === 0;
+    });
+    res.forEach((expectation, index) => {
+      expect(driver.isImageSelected(index)).toBe(expectation);
+    });
   });
 });

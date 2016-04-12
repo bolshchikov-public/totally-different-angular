@@ -1,13 +1,31 @@
-$thumbnailWidth: 120px;
-$thumbnailHeight: 120px;
+$thumbnail-width: 120px;
+$thumbnail-height: 120px;
 
-.image-item {
-  width: $thumbnailWidth;
-  height: $thumbnailHeight;
+$regular-border: 1px solid white;
+$hover-border: 1px solid lightblue;
+$selected-border: 1px solid cornflowerblue;  
+
+thumbnail-image {
+  display: block;
+  width: $thumbnail-width;
+  height: $thumbnail-height;
   margin: 10px;
+  border: $regular-border;
+  
+  &[selected] {
+    border: $selected-border;
+  }
+  
+  &[selected]:hover {
+    border: $selected-border;
+  }
+  
+  &:hover {
+    border: $hover-border;
+  }
   
   img {
-    width: $thumbnailWidth;
-    height: $thumbnailHeight;
+    width: $thumbnail-width;
+    height: $thumbnail-height;
   }
 }

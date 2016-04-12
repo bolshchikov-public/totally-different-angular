@@ -54,6 +54,7 @@
     <script src="scripts/locale/messages_en.js"></script>
     <script src="scripts/components/totally-different-angular-app.js"></script>
     <script src="scripts/constants/images.js"></script>
+    <script src="scripts/components/thumbnail-image.js"></script>
     <!-- endbuild --><!-- scripts -->
     <!-- build:locale({.tmp,app}) scripts/locale/messages_${locale}.js -->
     <script src="scripts/locale/messages_${locale}.js"></script>

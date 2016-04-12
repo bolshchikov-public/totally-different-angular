@@ -1,8 +1,9 @@
-$asideWidth: 22em;
-$headerHeight: 35px;
-$footerHeight: 30px;
+$aside-width: 22em;
+$header-height: 35px;
+$footer-height: 30px;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   outline: 0;
@@ -28,7 +29,7 @@ header {
 }
 
 footer {
-  height: footerHeight;
+  height: footer-height;
   color: gray;
   font-size: 12px;
   text-align: center;
@@ -48,6 +49,6 @@ main {
   }
   
   aside {
-    width: $asideWidth;
+    width: $aside-width;
   }
 }
