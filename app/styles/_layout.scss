@@ -1,0 +1,53 @@
+$asideWidth: 22em;
+$headerHeight: 35px;
+$footerHeight: 30px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  font-family: Helvetica;
+  height: 100%;
+}
+
+header {
+  height: headerHeight;
+  line-height: headerHeight;
+  background: lightskyblue;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+
+footer {
+  height: footerHeight;
+  color: gray;
+  font-size: 12px;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  
+  .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  
+  aside {
+    width: $asideWidth;
+  }
+}

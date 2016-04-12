@@ -1,0 +1,13 @@
+$thumbnailWidth: 120px;
+$thumbnailHeight: 120px;
+
+.image-item {
+  width: $thumbnailWidth;
+  height: $thumbnailHeight;
+  margin: 10px;
+  
+  img {
+    width: $thumbnailWidth;
+    height: $thumbnailHeight;
+  }
+}

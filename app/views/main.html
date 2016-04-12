@@ -1,0 +1,14 @@
+<header>
+  Image Library
+</header>
+<main>
+  <div class="list">
+    <div class="image-item" data-hook="image-item" ng-repeat="item in $ctrl.images track by item.relativeUri">
+      <img ng-src="https://static.wixstatic.com/media/{{item.relativeUri}}_srz_p_120_120_75_22_0.50_1.20_0.00_jpg_srz" alt="{{item.title}}">
+    </div>
+  </div>
+  <aside></aside>
+</main>
+<footer>
+  JavaScript Framework Days &copy, 2016
+</footer>

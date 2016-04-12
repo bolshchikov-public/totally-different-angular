@@ -2,27 +2,15 @@
 'use strict';
 
 class TotallyDifferentAngularApp {
-  clicks: number;
-  name: string;
-
   /* @ngInject */
-  constructor(private $scope: ng.IScope) {
+  constructor(private images: ImageItem[]) {
 
-    this.clicks = 0;
-  }
-
-  onClick() {
-    this.clicks++;
   }
 }
 
 angular
   .module('totallyDifferentAngularAppInternal')
   .component('totallyDifferentAngularApp', {
-
-    templateUrl: 'views/totally-different-angular-app.html',
-    controller: TotallyDifferentAngularApp,
-    bindings: {
-      name: '='
-    }
+    templateUrl: 'views/main.html',
+    controller: TotallyDifferentAngularApp
   });

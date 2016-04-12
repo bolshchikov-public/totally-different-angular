@@ -34,7 +34,7 @@
   <body>
     
     <!-- Add your site or application content here -->
-    <totally-different-angular-app name="'totallyDifferentAngularApp'"></totally-different-angular-app>
+    <totally-different-angular-app class="app"></totally-different-angular-app>
     
 
     <!-- process-tags prefix('${staticsUrl}') -->
@@ -50,9 +50,10 @@
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="views/totally-different-angular-app.html.js"></script>
+    <script src="views/main.html.js"></script>
     <script src="scripts/locale/messages_en.js"></script>
     <script src="scripts/components/totally-different-angular-app.js"></script>
+    <script src="scripts/constants/images.js"></script>
     <!-- endbuild --><!-- scripts -->
     <!-- build:locale({.tmp,app}) scripts/locale/messages_${locale}.js -->
     <script src="scripts/locale/messages_${locale}.js"></script>

@@ -3,16 +3,12 @@
 
 class TotallyDifferentAngularAppDriver extends WixBaseViewUnitDriver {
 
-  render(name = '') {
-    this.renderFromTemplate(`<totally-different-angular-app name="name"></totally-different-angular-app>`, {name});
+  render() {
+    this.renderFromTemplate(`<totally-different-angular-app></totally-different-angular-app>`);
   }
 
-  getContainerElement() {
-    return this.findByDataHook('container');
-  }
-
-  getCounterElement() {
-    return this.findByDataHook('counter');
+  get images() {
+    return this.findAllByDataHook('image-item');
   }
 }
 
@@ -22,22 +18,14 @@ describe('Component: totallyDifferentAngularApp', () => {
   beforeEach(() => {
     module('totallyDifferentAngularAppInternal');
     driver = new TotallyDifferentAngularAppDriver();
+    driver.render();
   });
 
   afterEach(() => {
     driver.disconnectFromBody();
   });
 
-  it('should display name', () => {
-    driver.render('kukuchumuku');
-    expect(driver.element.text()).toContain('This is kukuchumuku');
-  });
-
-  it('should increase counter on click', () => {
-    driver.render();
-    expect(driver.getCounterElement().text()).toBe('0');
-
-    driver.getContainerElement().click();
-    expect(driver.getCounterElement().text()).toBe('1');
+  it('should display the list of images', () => {
+    expect(driver.images.length).toEqual(7);
   });
 });
