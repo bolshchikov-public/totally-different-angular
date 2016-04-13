@@ -34,4 +34,11 @@ describe('Component: totallyDifferentAngularApp', () => {
     let titles = driver.images.map(image => image.title);
     expect(titles).not.toContain(removedImage);
   });
+
+  it('should change selection to next', () => {
+    driver.selectImageAt(0);
+    driver.preview.next();
+    expect(driver.isImageSelected(1)).toBe(true);
+    expect(driver.isImageSelected(0)).toBe(false);
+  });
 });

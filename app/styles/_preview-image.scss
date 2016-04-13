@@ -1,0 +1,49 @@
+$preview-title-height: 25px; 
+$preview-nav-size: 24px;
+
+preview-image {
+  display: block;
+  position: relative;
+  width: 288px;
+  height: 155px;
+  border: 1px solid black;
+  
+  .preview-image-title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: $preview-title-height;
+    padding: 5px;
+    line-height: $preview-title-height;
+    color: white;
+    background-color: black;
+    opacity: .5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .preview-image-nav {
+    border-radius: 50%;
+    position: absolute;
+    width: $preview-nav-size;
+    height: $preview-nav-size;
+    margin: 5px;
+    text-align: center;
+    padding-top: 3px;
+    top: calc(50% - 24px);
+    background-color: white;
+    opacity: .5;
+  }
+  
+  .is-prev {
+    left: 0;
+    padding-right: 2px; 
+  }
+  
+  .is-next {
+    right: 0;
+    padding-left: 2px;
+  }
+}

@@ -1,9 +1,11 @@
 class AppDriver extends WixBaseViewUnitDriver {
   images: ThumbnailImageDriver[];
+  preview: PreviewImageDriver;
 
   constructor() {
     super();
     this.images = this.defineChildren(() => new ThumbnailImageDriver, 'thumbnail-image');
+    this.preview = this.defineChild(new PreviewImageDriver(), 'preview-image');
   }
 
   render() {

@@ -23,4 +23,5 @@ describe('Component: thumbnailImage', () => {
   it('should have image source', () => {
     expect(driver.imageSrc).toEqual(`https://static.wixstatic.com/media/${imageItem.relativeUri}_srz_p_120_120_75_22_0.50_1.20_0.00_jpg_srz`);
   });
+
 });

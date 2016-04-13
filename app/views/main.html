@@ -11,7 +11,13 @@
       item="item">
     </thumbnail-image>
   </div>
-  <aside></aside>
+  <aside>
+    <preview-image 
+      item="$ctrl.selected"
+      on-next="$ctrl.selectNext()"
+      on-prev="$ctrl.selectPrev()"
+    ></preview-image>
+  </aside>
 </main>
 <footer>
   JavaScript Framework Days &copy, 2016
