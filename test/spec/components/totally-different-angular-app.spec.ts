@@ -41,4 +41,11 @@ describe('Component: totallyDifferentAngularApp', () => {
     expect(driver.isImageSelected(1)).toBe(true);
     expect(driver.isImageSelected(0)).toBe(false);
   });
+
+  it('should change selection to prev', () => {
+    driver.selectImageAt(1);
+    driver.preview.prev();
+    expect(driver.isImageSelected(0)).toBe(true);
+    expect(driver.isImageSelected(1)).toBe(false);
+  });
 });
