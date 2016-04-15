@@ -5,10 +5,10 @@
   <div class="list">
     <thumbnail-image 
       ng-repeat="item in $ctrl.images track by item.relativeUri"
-      ng-click="$ctrl.selected = item"
-      ng-selected="$ctrl.selected === item"
+      item="item"
       on-remove="$ctrl.removeImage(item)" 
-      item="item">
+      ng-click="$ctrl.selected = item"
+      ng-selected="$ctrl.selected === item">
     </thumbnail-image>
   </div>
   <aside>
