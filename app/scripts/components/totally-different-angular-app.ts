@@ -10,16 +10,6 @@ class TotallyDifferentAngularApp {
     this.images = angular.copy(images);
   }
 
-  selectNext() {
-    let currentIndex = this.images.indexOf(this.selected);
-    this.selected = this.images[++currentIndex];
-  }
-
-  selectPrev() {
-    let currentIndex = this.images.indexOf(this.selected);
-    this.selected = this.images[--currentIndex];
-  }
-
   removeImage(item: ImageItem) {
     let index = this.images.indexOf(item);
     this.images.splice(index, 1);
